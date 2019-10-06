@@ -1,0 +1,10 @@
+html{
+    color:white;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+}
+.back-splash{
+    background-image: url("/assests/images/pokeball\ background.jpg");
+    background-repeat: no-repeat;
+    background-size: 1080px;
+
+}
