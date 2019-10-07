@@ -1,17 +1,17 @@
 var questions = [{
     question: "which pokemon is in the Pokedex as #1?",
     answer: ["Bulbasaur", "Mew", "Arceus", "Rhyhorn"],
-    correct: "Bulbasaur",
+    correct: "Bulbasaur"
 },
 {
     question: "What Pokeball allows you to guarantee capture of any pokemon?",
     answer: ["Master Ball", "Great Ball", "Heavy Ball", "Premier Ball"],
-    correct: "Master Ball",
+    correct: "Master Ball"
 },
 {
     question: "Each game has you choosing one of three starter pokemon. Which one of the following is not a type you can pick?",
     answer: ["Fire", "Water", "Grass", "Wind"],
-    correct: "Wind",
+    correct: "Wind"
 }];
 
 var correctCount = 0;
@@ -54,7 +54,7 @@ function correctGuess() {
 function showQuestions() {
 
     showResults();
-    stopTimer();//stop timer at results screen
+    // stopTimer();stop timer at results screen
 }
 
 //this is the start of the timer that would count and keep track of the time left for each question.
@@ -62,21 +62,21 @@ function showQuestions() {
 //the questions object and comparing the value of the correct answer which would trigger correct or wrong
 // guess functions. 
 
-var seconds = 15;
-var startTimer = setInterval(function () {
-    seconds = seconds - 1;
-    $("#count").innerHTML("time left: " + seconds);
+// var seconds = 15;
+// var startTimer = setInterval(function () {
+//     seconds = seconds - 1;
+//     $("#count").innerHTML("time left: " + seconds);
 
-    if (seconds <= 0) {
-        clearInterval(startTimer);
-        wrongCount++;
-    }
-}, 1000);
+//     if (seconds <= 0) {
+//         clearInterval(startTimer);
+//         wrongCount++;
+//     }
+// }, 1000);
 
 // start of game on click of h3 tag
 $(".start-button").on("click", function () {
     hideTitle();
     hideStuff();
     showQuestions();
-    startTimer();
+    // startTimer();
 });
