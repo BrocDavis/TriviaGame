@@ -28,6 +28,7 @@ function hideStuff() {
     $(".question").hide();//hides the question
     $(".results").hide();//hides results
     $(".wrong-guess").hide();//hides wrong guess
+    $(".correct-guess").hide();//hides correct guess
 }
 
 function showQuestion(index) {
@@ -43,24 +44,42 @@ function showResults() {
 }
 
 function wrongGuess(){
-    $("wrongGuess").show();
+    $("wrong-guess").show();
+}
+
+function correctGuess(){
+    $("correct-guess").show();
 }
 
 function showQuestions() {
-    for (var i = 0; i < questions.length; i++) {
-        if (gameEnd != true) {
-            
-        }
-        else {
-            
-        }
-    }
+
     showResults();
+    stopTimer();//stop timer at results screen
 }
+
+var startTimer = setInterval(function(){
+ var seconds = seconds - 1;
+ $("#count").innerhtml("time left: " + seconds);
+
+ if (seconds <= 0){
+     wrongGuess();
+     wrongCount++;
+ }
+},1000);
+
+function setTimer(){
+    
+}
+
+function stopTimer(){
+    clearInterval(startTimer);
+}
+
 
 // start of game on click of h3 tag
 $(".start-button").on("click", function () {
     hideTitle();
     hideStuff();
     showQuestions();
+    startTimer();
 });
