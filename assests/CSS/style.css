@@ -13,3 +13,14 @@ h3{
     background-color: black;
 
 }
+.wrong-guess{
+    background-image: url(/assests/images/x-mark.png);
+    background-repeat: no-repeat;
+    background-size: 200px;
+}
+
+.correct-guess{
+    background-image: url(/assests/images/Checkmark.png);
+    background-repeat: no-repeat;
+    background-size: 200px;
+}

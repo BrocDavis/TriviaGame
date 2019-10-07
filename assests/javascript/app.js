@@ -27,27 +27,29 @@ function hideStuff() {
     $("input").hide();//hides radio buttons
     $(".question").hide();//hides the question
     $(".results").hide();//hides results
+    $(".wrong-guess").hide();//hides wrong guess
 }
 
-function showQuestion() {
+function showQuestion(index) {
     $("input").show();
     $(".question").show();
+    $(".answer1").text(questions[index].question)
 }
 
 function showResults() {
     $(".results").show();
-    $(".correct-count").append(correctCount);
-    $(".wrong-count").append(wrongCount);
+    $(".correct-count").text("Correct answers: " + correctCount);
+    $(".wrong-count").text("Wrong answers: " + wrongCount);
 }
 
 function wrongGuess(){
-    
+    $("wrongGuess").show();
 }
 
 function showQuestions() {
     for (var i = 0; i < questions.length; i++) {
-        if (gameEnd != false) {
-            questions[i].question;
+        if (gameEnd != true) {
+            
         }
         else {
             
@@ -57,7 +59,8 @@ function showQuestions() {
 }
 
 // start of game on click of h3 tag
-$("#start-button").on("click", function () {
+$(".start-button").on("click", function () {
     hideTitle();
+    hideStuff();
     showQuestions();
 });
