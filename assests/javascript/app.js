@@ -11,7 +11,7 @@ var questions = [{
 {
     question: "Each game has you choosing one of three starter pokemon. Which one of the following is not a type you can pick?",
     answer: ["Fire", "Water", "Grass", "Wind"],
-    correct: "Electric",
+    correct: "Wind",
 }];
 
 var correctCount = 0;
@@ -26,7 +26,7 @@ function hideTitle() {
 function hideStuff() {
     $("input").hide();//hides radio buttons
     $(".question").hide();//hides the question
-    $(".results").hide();
+    $(".results").hide();//hides results
 }
 
 function showQuestion() {
@@ -34,26 +34,28 @@ function showQuestion() {
     $(".question").show();
 }
 
-function showResults(){
+function showResults() {
     $(".results").show();
     $(".correct-count").append(correctCount);
     $(".wrong-count").append(wrongCount);
 }
 
+function wrongGuess(){
+    
+}
+
 function showQuestions() {
     for (var i = 0; i < questions.length; i++) {
         if (gameEnd != false) {
-            setTimeout()
+            questions[i].question;
         }
         else {
-
+            
         }
     }
+    showResults();
 }
 
-function questionTimer() {
-    showQuestions();
-}
 // start of game on click of h3 tag
 $("#start-button").on("click", function () {
     hideTitle();
