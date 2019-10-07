@@ -43,11 +43,11 @@ function showResults() {
     $(".wrong-count").text("Wrong answers: " + wrongCount);
 }
 
-function wrongGuess(){
+function wrongGuess() {
     $("wrong-guess").show();
 }
 
-function correctGuess(){
+function correctGuess() {
     $("correct-guess").show();
 }
 
@@ -57,24 +57,21 @@ function showQuestions() {
     stopTimer();//stop timer at results screen
 }
 
-var startTimer = setInterval(function(){
- var seconds = seconds - 1;
- $("#count").innerhtml("time left: " + seconds);
+//this is the start of the timer that would count and keep track of the time left for each question.
+//after its implementation. I would then set this to call each question through a for loop referencing
+//the questions object and comparing the value of the correct answer which would trigger correct or wrong
+// guess functions. 
 
- if (seconds <= 0){
-     wrongGuess();
-     wrongCount++;
- }
-},1000);
+var seconds = 15;
+var startTimer = setInterval(function () {
+    seconds = seconds - 1;
+    $("#count").innerHTML("time left: " + seconds);
 
-function setTimer(){
-    
-}
-
-function stopTimer(){
-    clearInterval(startTimer);
-}
-
+    if (seconds <= 0) {
+        clearInterval(startTimer);
+        wrongCount++;
+    }
+}, 1000);
 
 // start of game on click of h3 tag
 $(".start-button").on("click", function () {
