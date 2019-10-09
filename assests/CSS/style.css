@@ -6,7 +6,7 @@ h3{
     background-color: rgb(238, 0, 0);
 }
 .back-splash{
-    background-image: url("/assests/images/pokeball\ background.jpg");
+    background-image: url("assests/images/pokeball\ background.jpg");
     background-repeat: no-repeat;
     background-size: 1080px;
     width: max-content;
@@ -14,13 +14,13 @@ h3{
 
 }
 .wrong-guess{
-    background-image: url(/assests/images/x-mark.png);
+    background-image: url(assests/images/x-mark.png);
     background-repeat: no-repeat;
     background-size: 200px;
 }
 
 .correct-guess{
-    background-image: url(/assests/images/Checkmark.png);
+    background-image: url(assests/images/Checkmark.png);
     background-repeat: no-repeat;
     background-size: 200px;
 }
